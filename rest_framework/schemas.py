@@ -238,7 +238,8 @@ class SchemaGenerator(object):
             url=urlparse.urljoin(self.url, path),
             action=method.lower(),
             encoding=encoding,
-            fields=fields
+            fields=fields,
+            description=callback.__doc__
         )
 
     def get_encoding(self, path, method, callback, view):
